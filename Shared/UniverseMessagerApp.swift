@@ -11,7 +11,7 @@ import SwiftUI
 struct UniverseMessagerApp: App {
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            StartView()
         }
     }
 }

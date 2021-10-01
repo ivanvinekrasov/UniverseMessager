@@ -13,13 +13,6 @@ struct LoginView: View {
 
     var body: some View {
         VStack{
-            HStack {
-                Spacer()
-                Button("Next") {
-            
-                }
-                .padding(.trailing)
-            }
             Spacer()
             Text("Your account")
                 .font(.system(size: 40, weight: .ultraLight))
@@ -27,19 +20,20 @@ struct LoginView: View {
             Text("Please enter your personal invitational data.")
                 .padding(.bottom)
             VStack {
-                
                 Divider()
                 TextField("User", text: $username)
                 Divider()
                 SecureField("Password", text: $password)
                 Divider()
             }
-            .foregroundColor(.white)
             .padding(.horizontal)
             .font(.system(size: 30))
             Spacer()
+            Spacer() 
         }
         .background(Color("BackgroundMain"))
+        .navigationBarBackButtonHidden(true)
+
     }
 }
 

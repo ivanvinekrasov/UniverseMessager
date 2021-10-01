@@ -9,31 +9,35 @@ import SwiftUI
 
 struct StartView: View {
     var body: some View {
-        VStack {
-            Spacer()
-            Image(systemName: "ellipsis.bubble")
-                .font(.system(size: 175, weight: .light))
-            Text("Universe")
-                .font(.system(size: 40))
+        NavigationView {
             VStack {
-                Text("The world's perfectious messaging app.")
-                Text("It is free, not secure.")
+                Spacer()
+                Image(systemName: "ellipsis.bubble")
+                    .font(.system(size: 175, weight: .light))
+                Text("Universe")
+                    .font(.system(size: 40))
+                VStack {
+                    Text("The world's perfectious messaging app.")
+                    Text("It is free, not secure.")
+                }
+                .font(.system(size: 15))
+                Spacer()
+                Button(action: {}) {
+                    NavigationLink(destination: LoginView()) {
+                        Text("Start Messaging")
+                    }
+                }
+                .buttonStyle(GrowingButton())
+                Spacer()
             }
-            .font(.system(size: 15))
-            Spacer()
-            Button(action: {}) {
-                Text("Start Messaging")
-            }
-            .buttonStyle(GrowingButton())
-            Spacer()
+            .frame(
+                  minWidth: 0,
+                  maxWidth: .infinity,
+                  minHeight: 0,
+                  maxHeight: .infinity
+                )
+            .background(Color("BackgroundMain"))
         }
-        .frame(
-              minWidth: 0,
-              maxWidth: .infinity,
-              minHeight: 0,
-              maxHeight: .infinity
-            )
-        .background(Color("BackgroundMain"))
     }
 }
 
