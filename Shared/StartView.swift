@@ -12,8 +12,9 @@ struct StartView: View {
         NavigationView {
             VStack {
                 Spacer()
-                Image(systemName: "ellipsis.bubble")
-                    .font(.system(size: 175, weight: .light))
+//                Image(systemName: "ellipsis.bubble")
+                Image(systemName: "bubble.left.and.bubble.right")
+                    .font(.system(size: 160, weight: .light))
                 Text("Universe")
                     .font(.system(size: 40))
                 VStack {
@@ -37,6 +38,7 @@ struct StartView: View {
                   maxHeight: .infinity
                 )
             .background(Color("BackgroundMain"))
+            .navigationBarHidden(true)
         }
     }
 }

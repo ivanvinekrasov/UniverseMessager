@@ -13,7 +13,7 @@ struct UserCardView: View {
         HStack{
             Image("Photo")
                 .resizable()
-                .frame(width: 56, height: 56)
+                .frame(width: 58, height: 58)
                 .clipShape(Circle())
                 .overlay(Circle().stroke(Color("ButtonColor"), lineWidth: 1))
                 
@@ -31,9 +31,11 @@ struct UserCardView: View {
                     Spacer()
                     Text("Count")
                 }
-                .padding(.bottom)
+                Divider()
             }
         }
+        
+        .frame(height: 60)
         .padding(.horizontal, 2)
     }
 }
