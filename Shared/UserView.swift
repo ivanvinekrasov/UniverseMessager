@@ -15,9 +15,11 @@ struct UserView: View {
                 UserCardView(user: user)
             }
             .padding()
+        .navigationBarTitle("Chats")
+        .background(Color("BackgroundMain"))
         }
-        .navigationBarBackButtonHidden(true)
         .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
         .background(Color("BackgroundMain"))
     }
 }

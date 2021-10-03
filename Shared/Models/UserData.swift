@@ -13,22 +13,24 @@ struct UserData: Identifiable {
     let photo: Image
     let username: String
     let password: String
+    var messageStore: [Message]
     
-    init(id: UUID = UUID(), name: String, photo: Image, username: String, password: String) {
+    init(id: UUID = UUID(), name: String, photo: Image, username: String, password: String, messageStore: [Message]) {
         self.id = id
         self.name = name
         self.photo = photo
         self.username = username
         self.password = password
+        self.messageStore = messageStore
     }
 }
 
 extension UserData {
     static var data: [UserData] {
         [
-            UserData(name: "Vansho", photo: Image("Photo"), username: "vansho", password: "pass"),
-            UserData(name: "Alen'", photo: Image("Photo"), username: "alina", password: "pass2"),
-            UserData(name: "Agent Bankford", photo: Image("Photo"), username: "CIA", password: "pass3")
+            UserData(name: "Vansho", photo: Image("Photo"), username: "vansho", password: "pass", messageStore: Message.data),
+            UserData(name: "Alinka", photo: Image("Photo"), username: "alinka", password: "pass2", messageStore: Message.data),
+            UserData(name: "Agent Bankford", photo: Image("Photo"), username: "CIA", password: "pass3", messageStore: Message.data)
         ]
     }
 }
